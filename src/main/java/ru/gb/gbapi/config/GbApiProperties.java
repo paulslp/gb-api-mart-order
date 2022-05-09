@@ -28,5 +28,13 @@ public class GbApiProperties {
         private String manufacturerUrl;
         private String categoryUrl;
         private String productUrl;
+        private String manufacturerExternalUrl;
+        private String manufacturerInternalUrl;
+        private String categoryExternalUrl;
+        private String categoryInternalUrl;
+        private String productExternalUrl;
+        private String productInternalUrl;
+        private String orderExternalUrl;
+        private String orderInternalUrl;
     }
 }

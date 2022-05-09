@@ -14,11 +14,14 @@ import lombok.NoArgsConstructor;
 import ru.gb.gbapi.common.enums.OrderStatus;
 import ru.gb.gbapi.product.dto.ProductDto;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -40,12 +43,12 @@ public class OrderDto implements Serializable {
     private String mail;
     private OrderStatus status;
     @FutureOrPresent
-    @JsonFormat(pattern="dd.MM.yyyy")
+    @JsonFormat(pattern = "dd.MM.yyyy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate deliveryDate;
     @NotEmpty
-    private Set<ProductDto> products;
+    private List<ProductDto> products;
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime createdDate;
