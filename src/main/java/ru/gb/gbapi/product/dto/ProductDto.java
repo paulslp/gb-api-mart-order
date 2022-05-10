@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 import ru.gb.gbapi.category.dto.CategoryDto;
 import ru.gb.gbapi.common.enums.Status;
 
@@ -39,6 +40,7 @@ public class ProductDto {
     @JsonFormat(pattern = "dd.MM.yyyy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate manufactureDate;
     @NotNull
     private Status status;
