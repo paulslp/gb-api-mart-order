@@ -44,4 +44,6 @@ public class ProductDto {
     private Status status;
     private String manufacturer;
     private List<CategoryDto> categories;
+
+    List<String> categoriesIdForAdding;
 }

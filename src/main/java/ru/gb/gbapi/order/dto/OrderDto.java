@@ -55,4 +55,6 @@ public class OrderDto implements Serializable {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime lastModifiedDate;
+
+    List<String> productsIdForAdding;
 }
