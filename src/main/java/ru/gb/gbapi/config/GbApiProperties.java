@@ -36,5 +36,7 @@ public class GbApiProperties {
         private String productInternalUrl;
         private String orderExternalUrl;
         private String orderInternalUrl;
+        private String userExternalUrl;
+        private String authenticationExternalUrl;
     }
 }
